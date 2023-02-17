@@ -1,0 +1,46 @@
+GET /my_index/_search
+
+{
+
+  "size": 0,
+
+  "aggs": {
+
+    "distinct_values": {
+
+      "terms": {
+
+        "field": "my_field",
+
+        "size": 10,  // Set size based on how many distinct values you expect
+
+        "shard_size": 10000 // Increase shard size to get more accurate results
+
+      },
+
+      "aggs": {
+
+        "top_hits": {
+
+          "top_hits": {
+
+            "_source": {
+
+              "includes": ["field1", "field2", "field3"] // Add the fields you want to include in the result
+
+            },
+
+            "size": 1 // Set size to 1 to get only the first matching document
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
