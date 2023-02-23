@@ -1,0 +1,16 @@
+CREATE TABLE #tempParam (paramValue INT)
+
+#!/bin/bash
+
+
+
+# Read the data from the file and generate the SQL script
+
+awk '{print "INSERT INTO #tempParam (paramValue) VALUES (" $0 ")" }' myfile.txt > insert.sql
+
+
+
+# Execute the SQL script using sqlcmd
+
+sqlcmd -S myServer -d myDatabase -U myUsername -P myPassword -i insert.sql
+
