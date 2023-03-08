@@ -1,0 +1,42 @@
+<project>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  
+
+  <groupId>com.example</groupId>
+
+  <artifactId>example-app</artifactId>
+
+  <version>1.0.0</version>
+
+  
+
+  <dependencies>
+
+    <dependency>
+
+      <groupId>org.apache.httpcomponents</groupId>
+
+      <artifactId>httpclient</artifactId>
+
+      <version>4.5.13</version>
+
+    </dependency>
+
+    <dependency>
+
+      <groupId>org.elasticsearch.client</groupId>
+
+      <artifactId>elasticsearch-rest-client</artifactId>
+
+      <version>7.15.1</version>
+
+    </dependency>
+
+  </dependencies>
+
+  
+
+</project>
+
