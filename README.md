@@ -1,6 +1,13 @@
 # mynotes
 aws ec2 describe-instances --filters "Name=subnet-id,Values=**YourSubnetID**" --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text
 
+SELECT YEAR(CONVERT(date, CAST(date_column AS varchar(8)), 112)) AS year_group, COUNT(*) AS count
+
+FROM your_table
+
+GROUP BY YEAR(CONVERT(date, CAST(date_column AS varchar(8)), 112))
+
+
 GET my_policy/_search
 
 {
