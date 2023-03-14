@@ -1,0 +1,14 @@
+<camelContext xmlns="http://camel.apache.org/schema/spring">
+
+    <route>
+
+        <from uri="direct:input"/>
+
+        <to uri="validator:classpath:/path/to/schema.xsd"/>
+
+        <log message="XML is valid"/>
+
+    </route>
+
+</camelContext>
+
